@@ -13,6 +13,7 @@
         }
         .section-content {
             min-height: 80vh;
+            padding-top: 4rem; /* Adjusted for sticky header */
         }
         /* Custom styles for professional look */
         .card-shadow {
@@ -43,7 +44,8 @@
                         <span>ENERGYPRO</span>
                     </a>
                 </div>
-                <nav class="flex space-x-6 text-sm font-medium">
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-6 text-sm font-medium">
                     <a href="#beranda" class="nav-item p-2 hover:text-emerald-500 transition duration-150 ease-in-out nav-active">Beranda</a>
                     <a href="#tentang-kami" class="nav-item p-2 hover:text-emerald-500 transition duration-150 ease-in-out">Tentang Kami</a>
                     <a href="#produk" class="nav-item p-2 hover:text-emerald-500 transition duration-150 ease-in-out">Produk & Layanan</a>
@@ -53,6 +55,24 @@
                     <a href="#edukasi" class="nav-item p-2 hover:text-emerald-500 transition duration-150 ease-in-out">Edukasi</a>
                     <a href="#kontak" class="nav-item bg-emerald-500 text-white px-3 py-2 rounded-full hover:bg-emerald-600 transition duration-150 ease-in-out">Order Sekarang</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col text-sm font-medium">
+                <a href="#beranda" class="nav-item block p-2 rounded-md hover:bg-gray-50 text-gray-700 nav-active">Beranda</a>
+                <a href="#tentang-kami" class="nav-item block p-2 rounded-md hover:bg-gray-50 text-gray-700">Tentang Kami</a>
+                <a href="#produk" class="nav-item block p-2 rounded-md hover:bg-gray-50 text-gray-700">Produk & Layanan</a>
+                <a href="#spesifikasi" class="nav-item block p-2 rounded-md hover:bg-gray-50 text-gray-700">Spesifikasi</a>
+                <a href="#legalitas" class="nav-item block p-2 rounded-md hover:bg-gray-50 text-gray-700">Legalitas</a>
+                <a href="#tren-harga" class="nav-item block p-2 rounded-md hover:bg-gray-50 text-gray-700">Tren Harga</a>
+                <a href="#edukasi" class="nav-item block p-2 rounded-md hover:bg-gray-50 text-gray-700">Edukasi</a>
+                <a href="#kontak" class="nav-item block text-center mt-2 bg-emerald-500 text-white py-2 rounded-full hover:bg-emerald-600">Order Sekarang</a>
             </div>
         </div>
     </header>
@@ -65,51 +85,54 @@
         <!-- 1. Beranda -->
         <section id="beranda" class="py-16 section-content">
             <div class="text-center mb-12">
-                <h1 class="text-5xl font-extrabold text-gray-900 mb-4 leading-tight">Solusi Energi Diesel Industri Terdepan di Indonesia.</h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Keandalan. Kualitas. Kepatuhan. Jaminan suplai solar non-subsidi (B35/HSD/MFO) untuk bisnis B2B Anda.</p>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">Solusi Energi Diesel Industri Terdepan di Indonesia.</h1>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Keandalan. Kualitas. Kepatuhan. Jaminan suplai solar non-subsidi (B35/HSD/MFO) untuk bisnis B2B Anda.</p>
+                 <div class="mt-8 mx-auto w-full md:w-3/4 lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
+                    <!-- Penempatan Gambar Truk Tangki Solar Industri -->
+                    <img src="truk tangki solar.jpg-76f388da-b382-4d3c-82ec-1eb7dcdefd36" alt="Truk Tangki Solar Industri" class="w-full h-auto object-cover rounded-xl"> 
+                </div>
             </div>
 
             <!-- Keunggulan Kompetitif -->
-            <div class="grid md:grid-cols-4 gap-8 mb-16">
+            <div class="grid md:grid-cols-4 gap-6 sm:gap-8 mb-16">
                 <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-emerald-500">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Kualitas Terjamin (B35 & HSD)</h3>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Kualitas Terjamin (B35 & HSD)</h3>
                     <p class="text-gray-600 text-sm">Produk kami memenuhi standar SNI dan teknis global. Fokus pada Cetane Number & Lubricity untuk kinerja mesin optimal.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-emerald-500">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Legalitas Penuh ESDM</h3>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Legalitas Penuh ESDM</h3>
                     <p class="text-gray-600 text-sm">Izin resmi Ditjen Migas. Transaksi aman, transparan, dan 100% patuh regulasi pemerintah.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-emerald-500">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Suplai Tanpa Batas (B2B)</h3>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Suplai Tanpa Batas (B2B)</h3>
                     <p class="text-gray-600 text-sm">Fokus 100% pada industri. Prioritas suplai stabil, bebas dari alokasi Bahan Bakar Bersubsidi (PSO).</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-emerald-500">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Transparansi Harga</h3>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Transparansi Harga</h3>
                     <p class="text-gray-600 text-sm">Akses ke tren harga BBM Industri terbaru dan penawaran yang kompetitif untuk perencanaan anggaran akurat.</p>
                 </div>
             </div>
 
             <!-- Data & CTA -->
-            <div class="bg-emerald-50 p-10 rounded-2xl mb-12 card-shadow">
+            <div class="bg-emerald-50 p-6 sm:p-10 rounded-2xl mb-12 card-shadow">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Data Kebutuhan Energi Indonesia (ESDM 2023)</h2>
-                        <ul class="space-y-3 text-lg text-gray-700 list-disc list-inside">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Data Kebutuhan Energi Indonesia (ESDM 2023)</h2>
+                        <ul class="space-y-3 text-base lg:text-lg text-gray-700 list-disc list-inside">
                             <li>Sektor Industri menyumbang <span class="font-bold">45,60%</span> dari konsumsi energi final.</li>
                             <li>Sektor Transportasi menyumbang <span class="font-bold">36,74%</span> dari konsumsi energi final.</li>
-                            <!-- Teks di bold dan tanda asterisk dihilangkan -->
                             <li>Total Penjualan Solar Domestik (Biogasoil) mencapai <span class="font-bold">35,7 Juta Kilo Liter</span> (2023).</li>
                         </ul>
                         <p class="mt-4 text-sm text-gray-500">Sumber: Handbook of Energy & Economic Statistics of Indonesia 2023</p>
                     </div>
                     <div class="text-center space-y-4">
-                        <h2 class="text-2xl font-bold text-gray-900">Jangan Tunda Kebutuhan Energi Anda.</h2>
+                        <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Jangan Tunda Kebutuhan Energi Anda.</h2>
                         <!-- Tombol diarahkan ke kontak langsung -->
-                        <a href="#kontak" class="cta-primary inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 shadow-lg">
+                        <a href="#kontak" class="cta-primary w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 shadow-lg">
                             Dapatkan Penawaran Solar Industri Terbaik Hari Ini
                         </a>
                         <!-- Mengganti nomor WA -->
-                        <a href="https://wa.me/6281219965256" target="_blank" class="cta-primary inline-flex items-center justify-center px-8 py-3 border border-emerald-600 text-base font-medium rounded-full text-emerald-600 bg-white hover:bg-emerald-50 shadow-md transition duration-150 ease-in-out">
+                        <a href="https://wa.me/6281219965256" target="_blank" class="cta-primary w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 border border-emerald-600 text-base font-medium rounded-full text-emerald-600 bg-white hover:bg-emerald-50 shadow-md transition duration-150 ease-in-out">
                             Kirim Permintaan Pembelian (RFQ) via WhatsApp
                         </a>
                     </div>
@@ -118,8 +141,8 @@
 
              <!-- Area Layanan -->
             <div class="text-center pt-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Kami Melayani Sektor Inti Indonesia</h3>
-                <div class="flex justify-center flex-wrap gap-4 text-gray-600 font-medium">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Kami Melayani Sektor Inti Indonesia</h3>
+                <div class="flex justify-center flex-wrap gap-3 sm:gap-4 text-gray-600 font-medium">
                     <span class="bg-gray-100 px-4 py-2 rounded-full text-sm">Pabrik & Manufaktur</span>
                     <span class="bg-gray-100 px-4 py-2 rounded-full text-sm">Pelayaran & Maritim</span>
                     <span class="bg-gray-100 px-4 py-2 rounded-full text-sm">Proyek Konstruksi</span>
@@ -131,28 +154,28 @@
 
         <!-- 2. Tentang Kami -->
         <section id="tentang-kami" class="py-16 section-content">
-            <h1 class="text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Tentang Kami: Mitra Strategis Energi B2B</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Tentang Kami: Mitra Strategis Energi B2B</h1>
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <h2 class="text-2xl font-semibold text-emerald-600 mb-4">Pengalaman dan Integritas</h2>
+                    <h2 class="text-xl sm:text-2xl font-semibold text-emerald-600 mb-4">Pengalaman dan Integritas</h2>
                     <!-- Teks di bold dan tanda asterisk dihilangkan -->
                     <p class="mb-4 text-gray-700">Didirikan oleh tim dengan pengalaman kolektif lebih dari <span class="font-bold">20 tahun</span> di sektor minyak dan gas Indonesia. Kami berdedikasi menjadi distributor terkemuka untuk <span class="font-bold">Solar Industri Non-Subsidi</span> (HSD dan MFO).</p>
                     <p class="mb-4 text-gray-700">Fokus bisnis kami adalah melayani kebutuhan energi <span class="font-bold">Business-to-Business (B2B)</span> di sektor-sektor kritis di mana keandalan suplai, kepastian kualitas, dan kepatuhan regulasi adalah hal yang mutlak.</p>
 
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Visi & Misi Kami</h3>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3 mt-6">Visi & Misi Kami</h3>
                     <ul class="list-disc list-inside text-gray-700 space-y-2">
                         <li><span class="font-bold">Menjamin Suplai:</span> Mengelola rantai pasok yang efisien dan stabil.</li>
                         <li><span class="font-bold">Menerapkan Kepatuhan:</span> Beroperasi transparan, patuh regulasi ESDM/Ditjen Migas.</li>
                         <li><span class="font-bold">Menyediakan Kualitas:</span> Hanya mendistribusikan BBM yang memenuhi SNI dan spesifikasi teknis.</li>
                     </ul>
                 </div>
-                <div class="bg-white p-8 rounded-xl card-shadow">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Keahlian Tim dan Jaringan</h3>
+                <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Keahlian Tim dan Jaringan</h3>
                     <div class="space-y-4">
                         <p class="text-gray-700">Tim kami ahli dalam pengelolaan rantai pasok BBM non-subsidi, logistik, dan kepatuhan hukum di bawah Ditjen Migas ESDM.</p>
                         <h4 class="font-semibold text-gray-800">Jangkauan Logistik Vital:</h4>
                         <ul class="list-disc list-inside text-gray-700 ml-4">
-                            <li><span class="font-bold">Pelabuhan & Maritim:</span> Suplai untuk *bunker* kapal.</li>
+                            <li><span class="font-bold">Pelabuhan & Maritim:</span> Suplai untuk <i>bunker</i> kapal.</li>
                             <li><span class="font-bold">Kawasan Industri:</span> Pengiriman tepat waktu untuk pabrik.</li>
                             <li><span class="font-bold">Lokasi Proyek:</span> Distribusi ke lokasi konstruksi dan pertambangan terpencil.</li>
                         </ul>
@@ -168,12 +191,16 @@
 
         <!-- 3. Produk & Layanan -->
         <section id="produk" class="py-16 section-content">
-            <h1 class="text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Produk & Layanan: Kualitas Premium Industri</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Produk & Layanan: Kualitas Premium Industri</h1>
+            
+            <div class="mb-8 w-full rounded-xl overflow-hidden shadow-xl">
+                 <!-- Ilustrasi Tiga Produk BBM: B35, HSD, MFO - Placeholder dihilangkan -->
+            </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Produk 1: Biosolar B35 -->
                 <div class="bg-white p-6 rounded-xl card-shadow border-l-4 border-blue-500">
-                    <h2 class="text-2xl font-bold text-blue-700 mb-3 flex items-center">
+                    <h2 class="text-xl sm:text-2xl font-bold text-blue-700 mb-3 flex items-center">
                         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         Biosolar B35 (HSD)
                     </h2>
@@ -199,7 +226,7 @@
 
                 <!-- Produk 2: HSD Murni -->
                 <div class="bg-white p-6 rounded-xl card-shadow border-l-4 border-yellow-500">
-                    <h2 class="text-2xl font-bold text-yellow-700 mb-3 flex items-center">
+                    <h2 class="text-xl sm:text-2xl font-bold text-yellow-700 mb-3 flex items-center">
                         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2a3 3 0 01-3-2c0-1.105 1.343-2 3-2zM12 21c4.714 0 7.614-4.238 6.55-8.55-1.15-4.59-4.836-7.45-10.55-7.45S4.59 7.86 3.45 12.45C2.386 16.762 5.286 21 10 21h2z"></path></svg>
                         HSD Murni (B0)
                     </h2>
@@ -224,7 +251,7 @@
 
                 <!-- Produk 3: MFO -->
                 <div class="bg-white p-6 rounded-xl card-shadow border-l-4 border-red-500">
-                    <h2 class="text-2xl font-bold text-red-700 mb-3 flex items-center">
+                    <h2 class="text-xl sm:text-2xl font-bold text-red-700 mb-3 flex items-center">
                         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9h-3a2 2 0 00-2 2c0 2.5 1.76 4.39 5 6s4.76-1.5 5-4a9 9 0 00-9-9z"></path></svg>
                         Marine Fuel Oil (MFO)
                     </h2>
@@ -241,7 +268,7 @@
                             </tr>
                             <tr class="border-t">
                                 <td class="py-1 font-medium text-gray-900">Catatan Teknis</td>
-                                <td class="py-1 text-right">Membutuhkan *pre-heated* (Chevron, hlm. 2)</td>
+                                <td class="py-1 text-right">Membutuhkan <i>pre-heated</i> (Chevron, hlm. 2)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -249,11 +276,11 @@
             </div>
 
             <div class="mt-12 text-center">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Layanan Distribusi & Logistik B2B</h2>
-                <div class="flex justify-center flex-wrap gap-6 text-gray-700">
-                    <span class="p-3 bg-white rounded-lg shadow-md flex items-center"><svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Pengiriman Tepat Waktu</span>
-                    <span class="p-3 bg-white rounded-lg shadow-md flex items-center"><svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2m-9 0V3h4v2m-4 0h4m-4 0v2"></path></svg>Armada Berizin & Tera Ulang</span>
-                    <span class="p-3 bg-white rounded-lg shadow-md flex items-center"><svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>Layanan Door-to-Door (Kawasan/Pelabuhan)</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Layanan Distribusi & Logistik B2B</h2>
+                <div class="flex justify-center flex-wrap gap-3 sm:gap-6 text-gray-700">
+                    <span class="p-3 bg-white rounded-lg shadow-md flex items-center text-sm"><svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Pengiriman Tepat Waktu</span>
+                    <span class="p-3 bg-white rounded-lg shadow-md flex items-center text-sm"><svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2m-9 0V3h4v2m-4 0h4m-4 0v2"></path></svg>Armada Berizin & Tera Ulang</span>
+                    <span class="p-3 bg-white rounded-lg shadow-md flex items-center text-sm"><svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>Layanan Door-to-Door (Kawasan/Pelabuhan)</span>
                 </div>
             </div>
 
@@ -266,28 +293,32 @@
 
         <!-- 4. Spesifikasi & Kualitas -->
         <section id="spesifikasi" class="py-16 section-content">
-            <h1 class="text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Spesifikasi & Kualitas: Jaminan Performa Mesin</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Spesifikasi & Kualitas: Jaminan Performa Mesin</h1>
+             <!-- Ilustrasi Injektor Diesel Bersih vs Kotor (Placeholder dihilangkan) -->
+            <div class="mb-8 w-full rounded-xl overflow-hidden shadow-xl">
+                 <!--Placeholder sudah dihilangkan-->
+            </div>
 
-            <div class="bg-white p-8 rounded-xl card-shadow">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Biodiesel B35: Standar Kualitas Utama</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow overflow-x-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Biodiesel B35: Standar Kualitas Utama</h2>
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                         <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4">Parameter Kualitas</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4">Batas/Nilai Ideal</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/2">Fungsi Kritis (Berdasarkan Chevron Technical Review)</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 min-w-[120px]">Parameter Kualitas</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 min-w-[120px]">Batas/Nilai Ideal</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/2 min-w-[200px]">Fungsi Kritis (Berdasarkan Chevron Technical Review)</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Cetane Number (CN)</td>
                             <td class="px-6 py-4 whitespace-nowrap text-emerald-600 font-bold">Min. 48-51</td>
-                            <td class="px-6 py-4 text-sm text-gray-700">Mengukur kualitas penyalaan. CN tinggi memperpendek *ignition delay* yang mengurangi *diesel knock* dan asap (hlm. 3-4, 54-55).</td>
+                            <td class="px-6 py-4 text-sm text-gray-700">Mengukur kualitas penyalaan. CN tinggi memperpendek <i>ignition delay</i> yang mengurangi <i>diesel knock</i> dan asap (hlm. 3-4, 54-55).</td>
                         </tr>
                          <tr>
                             <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Lubricity (HFRR)</td>
                             <td class="px-6 py-4 whitespace-nowrap text-emerald-600 font-bold">Maks. 520 μm (WSD)</td>
-                            <td class="px-6 py-4 text-sm text-gray-700">Kemampuan bahan bakar mencegah keausan pada pompa injeksi dan injektor. Penting untuk solar *Ultra-Low Sulfur* (hlm. 5, 84).</td>
+                            <td class="px-6 py-4 text-sm text-gray-700">Kemampuan bahan bakar mencegah keausan pada pompa injeksi dan injektor. Penting untuk solar <i>Ultra-Low Sulfur</i> (hlm. 5, 84).</td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Viskositas (Kinematic)</td>
@@ -309,8 +340,8 @@
             </div>
 
             <div class="mt-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Jaminan Kualitas: Memahami Keausan Mesin</h2>
-                <p class="text-gray-700 mb-4">Proses *hydrotreating* untuk memurnikan solar (menurunkan sulfur) cenderung menghilangkan senyawa pelumas alami. Tanpa aditif *lubricity improver*, keausan parah pada *fuel pump* dan *injector* dapat terjadi.</p>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Jaminan Kualitas: Memahami Keausan Mesin</h2>
+                <p class="text-gray-700 mb-4">Proses <i>hydrotreating</i> untuk memurnikan solar (menurunkan sulfur) cenderung menghilangkan senyawa pelumas alami. Tanpa aditif <i>lubricity improver</i>, keausan parah pada <i>fuel pump</i> dan <i>injector</i> dapat terjadi.</p>
                 <!-- Teks di bold dan tanda asterisk dihilangkan -->
                 <p class="text-gray-700 mb-6">Setiap produk Solar Industri kami di-<span class="font-bold">aditize</span> dengan aditif <span class="font-bold">lubricity improver</span> yang teruji untuk memastikan keausan minimum dan umur pakai komponen sistem injeksi yang panjang.</p>
             </div>
@@ -324,12 +355,16 @@
         
         <!-- 5. Legalitas & Kepatuhan Regulasi -->
         <section id="legalitas" class="py-16 section-content">
-            <h1 class="text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Legalitas & Kepatuhan: Transaksi Resmi ESDM</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Legalitas & Kepatuhan: Transaksi Resmi ESDM</h1>
+             <!-- Ilustrasi Logo ESDM dan Izin - Placeholder dihilangkan -->
+             <div class="mb-8 w-full rounded-xl overflow-hidden shadow-xl">
+                 <!--Placeholder sudah dihilangkan-->
+            </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Izin Niaga Umum -->
-                <div class="bg-white p-6 rounded-xl card-shadow col-span-2">
-                    <h2 class="text-2xl font-bold text-emerald-600 mb-3 flex items-center">
+                <div class="bg-white p-6 rounded-xl card-shadow md:col-span-2">
+                    <h2 class="text-xl sm:text-2xl font-bold text-emerald-600 mb-3 flex items-center">
                          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.04-.153-2.05-.438-3.04z"></path></svg>
                         Izin Niaga Umum (IUNU) Ditjen Migas
                     </h2>
@@ -345,7 +380,7 @@
                 <div class="bg-emerald-50 p-6 rounded-xl card-shadow">
                     <h2 class="text-2xl font-bold text-gray-900 mb-3">Kepatuhan Mandat B35</h2>
                     <p class="mb-4 text-gray-700">Produk kami secara ketat mematuhi mandat pencampuran Biodiesel B35 yang ditetapkan Pemerintah.</p>
-                    <p class="text-sm text-gray-600">Penting: Produsen mesin terus melakukan modifikasi sistem injeksi dan pengapian untuk beradaptasi dengan tingkat *blending* tinggi (B30 ke atas), seperti yang dilaporkan dalam *Biofuels Annual* (hlm. 5).</p>
+                    <p class="text-sm text-gray-600">Penting: Produsen mesin terus melakukan modifikasi sistem injeksi dan pengapian untuk beradaptasi dengan tingkat <i>blending</i> tinggi (B30 ke atas), seperti yang dilaporkan dalam <i>Biofuels Annual</i> (hlm. 5).</p>
                 </div>
             </div>
 
@@ -358,11 +393,11 @@
 
         <!-- 6. Tren Pasar & Harga BBM Industri -->
         <section id="tren-harga" class="py-16 section-content">
-            <h1 class="text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Tren Pasar & Harga: Transparansi Biaya Energi</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Tren Pasar & Harga: Transparansi Biaya Energi</h1>
             
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Faktor Utama Penentu Harga</h2>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Faktor Utama Penentu Harga</h2>
                     <ul class="space-y-4 text-gray-700">
                         <li class="p-4 bg-white rounded-lg card-shadow border-l-4 border-gray-400">
                             <span class="font-semibold text-gray-900">Harga Minyak Mentah Global:</span> Mengacu pada ICP (Indonesia Crude Price). Rata-rata ICP di tahun 2023 adalah <span class="font-bold">$78,43$ USD/barel</span> (ESDM 2023, hlm. x, 30).
@@ -376,12 +411,12 @@
                     </ul>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl card-shadow">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Skema Penawaran Harga B2B</h2>
+                <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Skema Penawaran Harga B2B</h2>
                     <p class="mb-6 text-gray-700">Kami menawarkan fleksibilitas harga untuk mendukung perencanaan anggaran jangka panjang Anda:</p>
                     <ul class="space-y-3">
                         <!-- Teks di bold dan tanda asterisk dihilangkan -->
-                        <li class="flex items-center text-gray-700"><svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="font-medium">Harga Harian (*Daily Price*):</span> Berbasis fluktuasi MOPS terbaru.</li>
+                        <li class="flex items-center text-gray-700"><svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="font-medium">Harga Harian (<i>Daily Price</i>):</span> Berbasis fluktuasi MOPS terbaru.</li>
                         <li class="flex items-center text-gray-700"><svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="font-medium">Kontrak Jangka Panjang:</span> Formula diskon untuk kontrak 3-12 bulan.</li>
                         <li class="flex items-center text-gray-700"><svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="font-medium">Konsultasi Anggaran Energi:</span> Proyeksi biaya akurat oleh tim ahli.</li>
                     </ul>
@@ -396,17 +431,17 @@
 
         <!-- 7. Artikel Edukasi (FAQ & Blog) -->
         <section id="edukasi" class="py-16 section-content">
-            <h1 class="text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Edukasi & FAQ: Basis Pengetahuan Energi Diesel</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Edukasi & FAQ: Basis Pengetahuan Energi Diesel</h1>
 
             <!-- Edukasi Singkat -->
-            <div class="bg-white p-8 rounded-xl card-shadow mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Perbedaan Kunci BBM Industri</h2>
+            <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow mb-12 overflow-x-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Perbedaan Kunci BBM Industri</h2>
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                         <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4">Jenis BBM</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4">Komponen</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/2">Aplikasi & Catatan Teknis</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 min-w-[100px]">Jenis BBM</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4 min-w-[120px]">Komponen</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/2 min-w-[200px]">Aplikasi & Catatan Teknis</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
@@ -424,14 +459,14 @@
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">MFO</td>
                             <td class="px-6 py-4 whitespace-nowrap">Bahan Bakar Residu</td>
-                            <td class="px-6 py-4 text-sm text-gray-700">Kapal berkecepatan rendah & Boiler. Membutuhkan *pre-heated* karena viskositas tinggi (Chevron, hlm. 2).</td>
+                            <td class="px-6 py-4 text-sm text-gray-700">Kapal berkecepatan rendah & Boiler. Membutuhkan <i>pre-heated</i> karena viskositas tinggi (Chevron, hlm. 2).</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
             <!-- FAQ -->
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">FAQ (Tanya Jawab Umum)</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">FAQ (Tanya Jawab Umum)</h2>
             <div class="space-y-4">
                 <div class="bg-white p-5 rounded-lg card-shadow">
                     <h3 class="font-bold text-gray-900 mb-2">Apa perbedaan Solar Industri Non-Subsidi dan Bersubsidi?</h3>
@@ -440,12 +475,12 @@
                 </div>
                 <div class="bg-white p-5 rounded-lg card-shadow">
                     <h3 class="font-bold text-gray-900 mb-2">Mengapa Cetane Number (CN) penting?</h3>
-                    <p class="text-gray-700 text-sm">CN adalah indikator kualitas penyalaan. CN tinggi memperpendek *ignition delay*, membuat mesin menyala lebih cepat, mengurangi *diesel knock*, dan meminimalkan emisi asap hitam. (*Chevron Technical Review*, hlm. 4).</p>
+                    <p class="text-gray-700 text-sm">CN adalah indikator kualitas penyalaan. CN tinggi memperpendek <i>ignition delay</i>, membuat mesin menyala lebih cepat, mengurangi <i>diesel knock</i>, dan meminimalkan emisi asap hitam. (Chevron Technical Review, hlm. 4).</p>
                 </div>
                 <div class="bg-white p-5 rounded-lg card-shadow">
                     <h3 class="font-bold text-gray-900 mb-2">Apakah B35 merusak mesin?</h3>
                     <!-- Teks di bold dan tanda asterisk dihilangkan -->
-                    <p class="text-gray-700 text-sm">Produsen mesin terus beradaptasi. Isu utama B35 adalah <span class="font-bold">kandungan air</span>, bukan FAME-nya. Dengan manajemen kualitas dan penyimpanan yang baik (yang kami jamin), risiko kerusakan diminimalkan. (*Biofuels Annual*, hlm. 5).</p>
+                    <p class="text-gray-700 text-sm">Produsen mesin terus beradaptasi. Isu utama B35 adalah <span class="font-bold">kandungan air</span>, bukan FAME-nya. Dengan manajemen kualitas dan penyimpanan yang baik (yang kami jamin), risiko kerusakan diminimalkan. (Biofuels Annual, hlm. 5).</p>
                 </div>
             </div>
 
@@ -458,12 +493,12 @@
 
         <!-- 8. Hubungi Kami / Order Sekarang -->
         <section id="kontak" class="py-16 section-content">
-            <h1 class="text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Hubungi Kami / Order Sekarang</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 border-b pb-2">Hubungi Kami / Order Sekarang</h1>
 
             <div class="grid md:grid-cols-2 gap-12">
                 <!-- Contact Info (Fokus Utama) -->
-                <div class="bg-white p-8 rounded-xl card-shadow col-span-2">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Kontak Langsung Tim Sales B2B</h2>
+                <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow md:col-span-2">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Kontak Langsung Tim Sales B2B</h2>
                     <!-- Teks di bold dan tanda asterisk dihilangkan -->
                     <p class="mb-6 text-gray-700">Tim Sales dan Ahli Logistik kami siap merespons kebutuhan volume besar Anda secara cepat, 24/7. <span class="font-bold">Hapus keraguan, dapatkan kepastian suplai.</span></p>
                     <div class="space-y-4 max-w-lg mx-auto">
@@ -481,9 +516,9 @@
                 </div>
 
                 <!-- RFQ Form Dihapus, diganti dengan deskripsi singkat -->
-                <div class="col-span-2 bg-emerald-50 p-8 rounded-xl card-shadow">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Proses Pemesanan (RFQ)</h2>
-                    <p class="text-gray-700 mb-4">Untuk efisiensi, semua permintaan harga (RFQ) dan negosiasi volume dilakukan langsung melalui jalur komunikasi utama kami. Kami memprioritaskan layanan personal dan cepat. Kirimkan detail kebutuhan Anda (Volume, Lokasi, Jenis BBM) melalui WhatsApp untuk Penawaran Harga (*Quotation*) resmi dalam 1x24 jam.</p>
+                <div class="col-span-2 bg-emerald-50 p-6 sm:p-8 rounded-xl card-shadow">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Proses Pemesanan (RFQ)</h2>
+                    <p class="text-gray-700 mb-4">Untuk efisiensi, semua permintaan harga (RFQ) dan negosiasi volume dilakukan langsung melalui jalur komunikasi utama kami. Kami memprioritaskan layanan personal dan cepat. Kirimkan detail kebutuhan Anda (Volume, Lokasi, Jenis BBM) melalui WhatsApp untuk Penawaran Harga (<i>Quotation</i>) resmi dalam 1x24 jam.</p>
                 </div>
             </div>
         </section>
@@ -530,13 +565,27 @@
         document.addEventListener('DOMContentLoaded', () => {
             const navItems = document.querySelectorAll('.nav-item');
             const sections = document.querySelectorAll('main section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Toggle mobile menu visibility
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
             // Function to set active class on nav item
             const setActiveNavItem = (hash) => {
                 navItems.forEach(item => {
                     item.classList.remove('nav-active');
+                    item.classList.remove('text-emerald-500'); // Remove for mobile list items
+                    
                     if (item.getAttribute('href') === hash) {
-                        item.classList.add('nav-active');
+                        if (item.classList.contains('bg-emerald-500')) {
+                             item.classList.add('bg-emerald-600');
+                        } else {
+                            item.classList.add('nav-active');
+                            item.classList.add('text-emerald-500'); // Add for mobile list items
+                        }
                     }
                 });
             };
@@ -549,6 +598,11 @@
                     const targetElement = document.getElementById(targetId);
                     
                     if (targetElement) {
+                        // Close mobile menu after click
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+
                         window.scrollTo({
                             top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
                             behavior: 'smooth'
